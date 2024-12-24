@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Namuve</title>
+    <title>Namuve - Estimate Revenue</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
@@ -25,7 +25,7 @@
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
 
@@ -34,91 +34,26 @@
       href="assets/vendor/bootstrap/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
     <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
     <link
       href="assets/vendor/glightbox/css/glightbox.min.css"
       rel="stylesheet"
     />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
   <body class="index-page">
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid position-relative d-flex align-items-center justify-content-between"
-      >
-        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <div class="img-cover-logo">
-            <img src="assets/img/Namuve-logo-1.png" alt="Namuve Logo" />
-          </div>
-        </a>
-
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="/" class="active">Home</a></li>
-            <li><a href="/about">About us</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>Services</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="/spaces">Spaces</a></li>
-                <li><a href="/serve">Serve</a></li>
-                <li><a href="/empire-holdings">Empire Holdings</a></li>
-                <li><a href="/techsol">TechSol</a></li>
-                <li><a href="/uniform">Uniform</a></li>
-              </ul>
-            </li>
-            <li><a href="/listings">Rooms</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>InsightsHub</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="/blogs">Blogs / News</a></li>
-                <li><a href="/faqs">FAQs</a></li>
-                <li>
-                  <a href="/reviews-and-testimonials"
-                    >Reviews and Testimonials</a
-                  >
-                </li>
-                <li>
-                  <a href="/terms-and-conditions"
-                    >Terms and Conditions / Privacy Policy</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <!-- <li><a href="index.html#pricing">Estimate Revenue</a></li> -->
-            <li><a href="/team">Team</a></li>
-            <li><a href="/contact">Contact</a></li>
-            
-            <!-- Currency Selector -->
-            <li>
-              <select id="currencySelector" class="form-select">
-                <option value="USD">USD</option>
-                <option value="PKR">PKR</option>
-              </select>
-            </li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
+    <script type="module">
+      import { createNavbar } from "/assets/js/navbar.js";
+      document.addEventListener("DOMContentLoaded", createNavbar);
+    </script>
 
     <main class="main">
       <!-- Hero Section -->
@@ -277,7 +212,7 @@
         </div>
       </section>
 
-      <!-- /Estimated Calculator Section -->
+      <!-- Estimated Calculator Section -->
       <div class="container mt-5">
         <h2>Your Estimated Revenue</h2>
         <p id="revenue-result">Your estimated revenue will be shown here.</p>
@@ -375,88 +310,10 @@
       <!-- /Contact Section -->
     </main>
 
-    <footer id="footer" class="footer position-relative light-background">
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-5 col-md-12 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img
-                src="assets/img/Namuve-logo-1.png"
-                alt="Logo"
-                class="me-3"
-                style="height: 60px; width: auto"
-              />
-            </a>
-
-            <p>
-              Namuve is your trusted partner for short-term rentals, offering
-              comfortable, stylish, and well-equipped properties. We redefine
-              convenience and hospitality, ensuring unforgettable stays for
-              every guest.
-            </p>
-            <div class="social-links d-flex mt-4">
-              <a href="https://www.youtube.com/@booknrent"
-                ><i class="bi bi-youtube"></i
-              ></a>
-              <a href="https://www.facebook.com/booknrentofficial/"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="https://www.instagram.com/booknrentofficial/"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHw3XnJXj1PJAAAAZOHLAPI0l_SpZrk10BIvLh0VhbroKkQwRxPHy9eU9kcCTyzENdNiLkeZOXJP_NyBd3tH2cEpulQuaJ9-5_bYzuS_FjiJYTTegMXgSkTT-WY0F0MLVKVM88=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbook-n-rent%2F"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="about-us.html">About us</a></li>
-              <li><a href="rooms.html">Rooms</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="contact-us.html">Contact us</a></li>
-              <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div
-            class="col-lg-3 col-md-12 footer-contact text-center text-md-start"
-          >
-            <h4>Contact Us</h4>
-            <p>30-A, 30</p>
-            <p>Block L, Gulberg III Lahore</p>
-            <p>Punjab 54000</p>
-            <p class="mt-4">
-              <strong>Phone:</strong> <span>+92 300 045 4711</span>
-            </p>
-            <p><strong>Email:</strong> <span>info@namuve.com</span></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span> <strong class="sitename">Namuve</strong>
-          <span>All Rights Reserved</span>
-        </p>
-      </div>
-    </footer>
-
+    <script type="module">
+      import { createFooter } from "/assets/js/footer.js";
+      document.addEventListener("DOMContentLoaded", createFooter);
+    </script>
     <!-- Scroll Top -->
     <a
       href="#"
@@ -467,6 +324,20 @@
 
     <!-- Preloader -->
     <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+
     <script>
       // Retrieve the price from localStorage
       const calculatedPrice = localStorage.getItem("calculatedPrice");
@@ -481,17 +352,5 @@
           "No price calculated yet.";
       }
     </script>
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
   </body>
 </html>

@@ -82,6 +82,9 @@ router.get("/uniform", (req, res) => {
 router.get("/terms-and-conditions", (req, res) => {
   res.sendFile(path.join(publicDir, "terms-and-conditions.html"));
 });
+router.get("/team", (req, res) => {
+  res.sendFile(path.join(publicDir, "team.html"));
+});
 
 // Add API routes
 router.get("/api/listings", async (req, res) => {
@@ -174,45 +177,51 @@ router.get("/api/listings/:id/calendar", async (req, res) => {
   const { id } = req.params;
   try {
     // Get token first (same way as listings endpoint)
-    const tokenResponse = await axios.post('https://api.hostaway.com/v1/accessTokens', 
+    const tokenResponse = await axios.post(
+      "https://api.hostaway.com/v1/accessTokens",
       new URLSearchParams({
-        grant_type: 'client_credentials',
-        client_id: '80066',
-        client_secret: 'd68ae34610624f57d27d57e14e1969a44ab1cf016037f98c5c338113bed5b570',
-        scope: 'general'
-      }), {
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded'
+        grant_type: "client_credentials",
+        client_id: "80066",
+        client_secret:
+          "d68ae34610624f57d27d57e14e1969a44ab1cf016037f98c5c338113bed5b570",
+        scope: "general",
+      }),
+      {
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
       }
-    });
+    );
 
     const authToken = `Bearer ${tokenResponse.data.access_token}`;
 
     // Now fetch calendars for the specific listing
-    const today = new Date().toISOString().split('T')[0];
+    const today = new Date().toISOString().split("T")[0];
     const nextMonth = new Date();
     nextMonth.setMonth(nextMonth.getMonth() + 1);
-    const endDate = nextMonth.toISOString().split('T')[0];
+    const endDate = nextMonth.toISOString().split("T")[0];
 
-    const calendarResponse = await axios.get(`https://api.hostaway.com/v1/listings/${id}/calendar`, {
-      headers: {
-        Authorization: authToken,
-        'Content-Type': 'application/json'
-      },
-      params: {
-        startDate: today,
-        endDate: endDate
+    const calendarResponse = await axios.get(
+      `https://api.hostaway.com/v1/listings/${id}/calendar`,
+      {
+        headers: {
+          Authorization: authToken,
+          "Content-Type": "application/json",
+        },
+        params: {
+          startDate: today,
+          endDate: endDate,
+        },
       }
-    });
+    );
 
     console.log(`Calendar data fetched for listing ${id}`);
     res.json(calendarResponse.data);
-
   } catch (error) {
     console.error(`Error fetching calendar for listing ${id}:`, error.message);
     res.status(500).json({
       error: "Failed to fetch calendar data",
-      details: error.response?.data || error.message
+      details: error.response?.data || error.message,
     });
   }
 });

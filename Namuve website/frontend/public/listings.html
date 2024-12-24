@@ -66,72 +66,10 @@
     />
   </head>
   <body>
-    <header id="header" class="header d-flex align-items-center fixed-top">
-      <div
-        class="container-fluid position-relative d-flex align-items-center justify-content-between"
-      >
-        <a href="/" class="logo d-flex align-items-center me-auto me-xl-0">
-          <!-- Uncomment the line below if you also wish to use an image logo -->
-          <div class="img-cover-logo">
-            <img src="assets/img/Namuve-logo-1.png" alt="Namuve Logo" />
-          </div>
-        </a>
-  
-        <nav id="navmenu" class="navmenu">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="./about.html">About us</a></li>
-            <li class="dropdown">
-              <a href="#" 
-                ><span>Services</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="/spaces">Spaces</a></li>
-                <li><a href="/serve">Serve</a></li>
-                <li><a href="/empire-holdings">Empire Holdings</a></li>
-                <li><a href="/techsol">TechSol</a></li>
-                <li><a href="/uniform">Uniform</a></li>
-              </ul>
-            </li>
-            <li><a href="/listings"  class="active">Rooms</a></li>
-            <li class="dropdown">
-              <a href="#"
-                ><span>InsightsHub</span>
-                <i class="bi bi-chevron-down toggle-dropdown"></i
-              ></a>
-              <ul>
-                <li><a href="/blogs">Blogs / News</a></li>
-                <li><a href="/faqs">FAQs</a></li>
-                <li>
-                  <a href="/reviews-and-testimonials"
-                    >Reviews and Testimonials</a
-                  >
-                </li>
-                <li>
-                  <a href="/terms-and-conditions"
-                    >Terms and Conditions / Privacy Policy</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <!-- <li><a href="index.html#pricing">Estimate Revenue</a></li> -->
-            <li><a href="/team">Team</a></li>
-            <li><a href="/contact">Contact</a></li>
-            
-            <!-- Currency Selector -->
-            <li>
-              <select id="currencySelector" class="form-select">
-                <option value="USD">USD</option>
-                <option value="PKR">PKR</option>
-              </select>
-            </li>
-          </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
-      </div>
-    </header>
-  
+    <script type="module">
+      import { createNavbar } from "/assets/js/navbar.js";
+      document.addEventListener("DOMContentLoaded", createNavbar);
+    </script>
     <main>
       <section
         id="call-to-action mt-5"
@@ -145,22 +83,26 @@
             data-aos="zoom-in"
             data-aos-delay="100"
           >
-            <div class="col-xl-10 ">
+            <div class="col-xl-10">
               <div class="text-center">
-                <h1 class="mt-lg-5" style="margin-top: 100px;">
+                <h1 class="mt-lg-5" style="margin-top: 100px">
                   Explore Our
-                  <span class="text-uppercase wow fadeInUp" data-wow-delay="0.1s">Luxury Properties</span>
+                  <span
+                    class="text-uppercase wow fadeInUp"
+                    data-wow-delay="0.1s"
+                    >Luxury Properties</span
+                  >
                 </h1>
                 <p class="pt-3 mb-5">
-                  Discover our handpicked collection of premium properties across
-                  Pakistan's most sought-after locations. From modern city
-                  apartments to serene mountain retreats, each property is carefully
-                  selected to ensure the highest standards of comfort and luxury.
-                  Whether you're planning a family vacation, a romantic getaway, or
-                  a business trip, our diverse portfolio of properties caters to all
-                  your accommodation needs. Experience the perfect blend of
-                  traditional Pakistani hospitality with modern amenities and
-                  exceptional service.
+                  Discover our handpicked collection of premium properties
+                  across Pakistan's most sought-after locations. From modern
+                  city apartments to serene mountain retreats, each property is
+                  carefully selected to ensure the highest standards of comfort
+                  and luxury. Whether you're planning a family vacation, a
+                  romantic getaway, or a business trip, our diverse portfolio of
+                  properties caters to all your accommodation needs. Experience
+                  the perfect blend of traditional Pakistani hospitality with
+                  modern amenities and exceptional service.
                 </p>
               </div>
             </div>
@@ -173,7 +115,9 @@
           <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
             <h1 class="my-4">
               Browse By
-              <span class="text-uppercase" style="color: #989549">Room Type</span>
+              <span class="text-uppercase" style="color: #989549"
+                >Room Type</span
+              >
             </h1>
           </div>
 
@@ -329,95 +273,11 @@
         </div>
       </div>
     </div>
-   
-    <footer id="footer" class="footer position-relative light-background">
-      <div class="container footer-top">
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-12 footer-about">
-            <a href="index.html" class="logo d-flex align-items-center">
-              <img
-                src="assets/img/Namuve-logo-1.png"
-                alt="Logo"
-                class="me-3"
-                style="height: 80px; width: auto"
-              />
-            </a>
-            <p>
-              Namuve is your trusted partner for short-term rentals, offering
-              comfortable, stylish, and well-equipped properties. We redefine
-              convenience and hospitality, ensuring unforgettable stays for
-              every guest.
-            </p>
-            <div class="social-links d-flex mt-4">
-              <a href="https://www.youtube.com/@booknrent"
-                ><i class="bi bi-youtube"></i
-              ></a>
-              <a href="https://www.facebook.com/booknrentofficial/"
-                ><i class="bi bi-facebook"></i
-              ></a>
-              <a href="https://www.instagram.com/booknrentofficial/"
-                ><i class="bi bi-instagram"></i
-              ></a>
-              <a
-                href="https://www.linkedin.com/authwall?trk=bf&trkInfo=AQHw3XnJXj1PJAAAAZOHLAPI0l_SpZrk10BIvLh0VhbroKkQwRxPHy9eU9kcCTyzENdNiLkeZOXJP_NyBd3tH2cEpulQuaJ9-5_bYzuS_FjiJYTTegMXgSkTT-WY0F0MLVKVM88=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fbook-n-rent%2F"
-                ><i class="bi bi-linkedin"></i
-              ></a>
-            </div>
-          </div>
 
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Company</h4>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="about-us.html">About us</a></li>
-              <li><a href="rooms.html">Rooms</a></li>
-              <li><a href="#">Team</a></li>
-              <li><a href="contact-us.html">Contact</a></li>
-              <!-- <li><a href="privacy-policy.html">Privacy Policy</a></li> -->
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Services</h4>
-            <ul>
-              <li><a href="#">Spaces</a></li>
-              <li><a href="#">Serve</a></li>
-              <li><a href="#">Empire Holdings</a></li>
-              <li><a href="#">TechSol</a></li>
-              <li><a href="#">Uniform</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-2 col-6 footer-links">
-            <h4>Learn</h4>
-            <ul>
-              <li><a href="#">Blog / News</a></li>
-              <li><a href="#">FAQs</a></li>
-              <li><a href="#">Reviews and Testimonials</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-12 footer-contact text-md-start">
-            <h4>Contact Us</h4>
-            <p>30-A, 30</p>
-            <p>Block L, Gulberg III Lahore</p>
-            <p>Punjab 54000</p>
-            <p class="mt-4">
-              <strong>Phone:</strong> <span>+92 300 045 4711</span>
-            </p>
-            <p><strong>Email:</strong> <span>info@namuve.com</span></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container copyright text-center mt-4">
-        <p>
-          © <span>Copyright</span> <strong class="sitename">Namuve</strong>
-          <span>All Rights Reserved</span>
-        </p>
-      </div>
-    </footer>
+    <script type="module">
+      import { createFooter } from "/assets/js/footer.js";
+      document.addEventListener("DOMContentLoaded", createFooter);
+    </script>
 
     <!-- Scroll Top -->
     <a
@@ -454,5 +314,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <script type="module" src="assets/js/listings.js"></script>
+    <!-- Remove the existing header section and add this script -->
   </body>
 </html>
